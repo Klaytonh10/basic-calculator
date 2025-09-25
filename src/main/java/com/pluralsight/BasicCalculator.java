@@ -8,30 +8,14 @@ public class BasicCalculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Input first number(int): ");
-        int firstNumber = scanner.nextInt();
+        double firstNumber = scanner.nextInt();
 
 
         System.out.print("Input second number(int): ");
-        int secondNumber = scanner.nextInt();
+        double secondNumber = scanner.nextDouble();
 
-        System.out.print("+, -, /, or *: ");
-        String operator = scanner.next();
-
-        if(operator.equals("+")) {
-            System.out.println("Result: " + (firstNumber + secondNumber));
-        } else if(operator.equals("-")) {
-            System.out.println("Result: " + (firstNumber - secondNumber));
-        } else if(operator.equals("/")) {
-            if(secondNumber != 0) {
-                System.out.println("Result: " + (firstNumber / secondNumber));
-            } else {
-                System.out.println("Error: Division by zero is not allowed.");
-            }
-        } else if(operator.equals("*")) {
-            System.out.println("Result: " + (firstNumber * secondNumber));
-        } else {
-            System.out.println("Error: Invalid operator.");
-        }
-
+        System.out.println("Possible operations: \n (A)dd \n (S)ubtract \n (M)ultiply \n (D)ivide");
+        String operation = scanner.next().toUpperCase();
+        System.out.println("You want to " + operation + " the numbers " + firstNumber + " and " + secondNumber);
     }
 }
